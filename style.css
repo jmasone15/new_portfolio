@@ -2,14 +2,6 @@
     --accent: #2f4f6f;
 }
 
-a {
-    color: var(--accent);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,6 +27,10 @@ body {
     padding: 0 20px;
 }
 
+main.container {
+    padding: 120px 20px 100px 20px;
+}
+
 section {
     padding: 80px 0;
     border-top: 1px solid #eeeeee;
@@ -50,7 +46,7 @@ h1 {
 h2 {
     font-size: 1.6rem;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 h3 {
@@ -74,6 +70,7 @@ p {
 nav {
     padding: 20px 0;
     border-bottom: 1px solid #eeeeee;
+    background-color: var(--accent);
 }
 
 .nav-inner {
@@ -83,14 +80,15 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
-    color: #111111;
+    color: #ffffff;
     margin-left: 20px;
     font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
     opacity: 0.6;
+    color: #eeeeee;
 }
 
 ul {
@@ -119,8 +117,37 @@ li::before {
     margin-top: 40px;
 }
 
-main {
-    padding: 120px 0 100px 0;
+.tech-col {
+    border-left: 2px solid #eeeeee;
+    padding-left: 16px;
+    margin-bottom: 50px;
+}
+
+.tech-col h4 {
+    border-bottom: 2px solid #eeeeee;
+}
+
+.cert {
+    border-left: 2px solid #eeeeee;
+    padding-left: 16px;
+    margin-bottom: 50px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin: 40px 0px;
+}
+
+.cert h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cert p {
+    font-size: 0.9rem;
+    color: #666666;
 }
 
 footer {
@@ -130,11 +157,13 @@ footer {
     color: #666666;
 }
 
-footer a {
+a {
     color: #111111;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-footer a:hover {
+a:hover {
     opacity: 0.6;
+    color: var(--accent);
 }
