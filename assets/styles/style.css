@@ -1,6 +1,14 @@
 :root {
-    --accent: #2f4f6f;
+    --accent: #424874;
 }
+
+/* Color options:
+#2f4f6f - Dark Blue
+#011638 - Dark Dark Blue
+#6F1D1B - Wine
+#6C464E - Mauve
+#424874 - French Blue (Purple)
+*/
 
 * {
     box-sizing: border-box;
@@ -39,7 +47,6 @@ body {
 
 section {
     padding: 80px 0;
-    border-top: 1px solid #eeeeee;
 }
 
 section:nth-of-type(even) {
@@ -82,8 +89,7 @@ p {
 }
 
 nav {
-    padding: 20px 0;
-    border-bottom: 1px solid #eeeeee;
+    padding: 5px 0;
     background-color: var(--accent);
 }
 
@@ -91,6 +97,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
 nav a {
@@ -157,6 +164,7 @@ li::before {
 .cert h3 {
     font-size: 1rem;
     font-weight: 600;
+    border-bottom: 2px solid #eeeeee;
 }
 
 .cert p {
